@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Daily Lock Screen for The Girls</title>
+    <meta name="author" content="Lily Roark">
+
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<script src="https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js"></script>
+
+	<style>
+		body{
+			text-align: center;
+			color: #52030e;
+			margin: 0px;
+			padding: 0px;
+		}
+		h1{
+			margin: 0px;
+			padding: 10px;
+			padding-top: 20px;
+		}
+		h2{
+			margin: 0px;
+			padding: 10px;
+		}
+		h3{
+			margin: 0px;
+			padding: 10px;
+		}
+		h4{
+			margin: 0px;
+			padding: 10px;
+		}
+		a{
+			color: #810517;
+		}
+		table{
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 2px;
+			margin-bottom: 2px;
+
+			border-collapse: collapse;
+			border-style: hidden;
+			border-top: 1px solid grey;
+		}
+		td{
+			padding: 3px;
+			border: 1px solid grey;
+		}
+		li{
+			margin: 2px;
+			border-bottom: 1px dashed grey;
+		}
+
+		.row {
+			flex: 50%;
+			padding: 5px;
+			border-top: 1px solid grey;
+		}
+
+		#columns {
+
+			text-align: center;
+			display: inline-flex;
+		}
+		#ios{
+			border-right: 1px solid grey;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="content">
+		<h1>Daily Lock</h1>
+		<h2>Daily Lock is a lockscreen of the day service</h2>
+		<h3>Each day's lockscreen is available at <a href="./photos/0A918DEB-CA7B-4824-9CBA-DE6F5F81FDCC.jpeg" id="lockLink">LockScreen</a></h3>
+		<h3>For automatic updating:</h3>
+	</div>
+	<div id="columns">
+		<div id="ios" class="row">
+			<h4>iOS</h4>
+			<ol>
+				<li>
+					<p>Download <a href="https://www.icloud.com/shortcuts/cab53e0b355c4d7295799f45b42e8ab6" target="_blank">this shortcut</a> on your phone.</p>
+					<p>Due to how Apple sets wallpaper you will need to determine a scale factor for your device.
+						Apple, by default, will zoom in any wallpaper used. So the shortcut zooms out the wallpaper by the scale factor.
+					</p>
+				</li>
+				<li>
+					<p>After importing the shortcut, open it (by clicking on the three dots in the upper right corner of the shortcut).<br>
+						The first number at the top of the shortcut is the scale factor.<br>
+						Change that number (by clicking on it) to the appropriate value.
+					</p>
+					The scale factor is generation and iOS specific, that is, an iPhone 7 has a different value than an iPhone 10.<br>
+					Here is a list of known scale factors:
+						<table>
+							<tr>
+								<td>All iOS 14</td>
+								<td>1.0</td>
+							</tr>
+							<tr>
+								<td>iPhone 7</td>
+								<td>1.19</td>
+							</tr>
+							<tr>
+								<td>iPhone 10</td>
+								<td>1.14</td>
+							</tr>
+						</table>
+					If your phone is not in the list, you can find your scale factor by trying different numbers until your lockscreen looks correct.<br>
+					The correct number will likely be in between 1.00 and 1.20.
+					<br>
+					<br>
+				</li>
+				<li>
+					<p>Click on the shortcut to set your lockscreen. To make it fully automatic:<br>
+						First, run the shortcut<br>
+						Click the Automation tab on the bottom of the shortcuts app.<br>
+						Click Create Personal Automation<br>
+						Choose your automation type (I use Time of Day -> Sunrise)<br>
+						Click Next<br>
+						Search for and click on Run Shortcut on the bottom of the screen<br>
+						Choose the Daily Lock shortcut<br>
+						Click Next<br>
+						Turn off Ask Before Running<br>
+						Click Done<br>
+						Nice!
+					</p>
+				</li>
+			</ol>
+		</div>
+		<div id="android" class="row">
+			<h4>Android</h4>
+			<p>Get an iPhone (@Katie)</p>
+			<div
+				data-live-photo
+				data-photo-src="https://www.icloud.com/sharedalbum/#B0R5oqs3qG6pHDo;1BE1553C-D5B1-423A-A7FA-69AA78A74467"
+				style="width: 320px; height: 320px">         
+		</div>
+	</div>
+
+	<script>
+		'use strict';
+		var lockLink = document.getElementById("lockLink")
+
+		lockLink.textContent = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + lockLink.textContent
+		
+	</script>
+
+</body>
+</html>
